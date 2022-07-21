@@ -1,3 +1,5 @@
+import { EgresoService } from './egreso/egreso.service';
+import { IngresoService } from './ingreso/ingreso.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -18,7 +20,7 @@ import { FormularioComponent } from './formulario/formulario.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [IngresoService, EgresoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
