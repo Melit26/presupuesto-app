@@ -1,4 +1,6 @@
+import { IngresoService } from './ingreso.service';
 import { Component, OnInit } from '@angular/core';
+import { Ingreso } from './ingreso.model';
 
 @Component({
   selector: 'app-ingreso',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IngresoComponent implements OnInit {
 
-  constructor() { }
+  ingresos:Ingreso[]=[];
 
-  ngOnInit(): void {
+  constructor(private ingresoService:IngresoService) { }
+
+  ngOnInit() {
+    this.ingresos = this.ingresoService.ingresos;
   }
 
 }
