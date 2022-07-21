@@ -17,4 +17,7 @@ export class IngresoComponent implements OnInit {
     this.ingresos = this.ingresoService.ingresos;
   }
 
+  eliminarRegistro(ingreso: Ingreso){
+    this.ingresoService.eliminar(ingreso)
+  }
 }
