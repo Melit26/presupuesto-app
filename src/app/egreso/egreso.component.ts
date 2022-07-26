@@ -9,8 +9,8 @@ import { Egreso } from './egreso.model';
 })
 export class EgresoComponent implements OnInit {
 
-  egresos: Egreso[]=[];
-  @Input() ingresoTotal?:number;
+  egresos: Egreso[] = [];
+  @Input() ingresoTotal?: number;
 
   constructor(private egresoService:EgresoService) { }
 
